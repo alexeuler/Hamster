@@ -37,9 +37,15 @@
 	
 	}
     
-    .carousel{
+    .carousel-wrapper{
 	position:relative;
 	width:450px;
 	height:(450/1.62)+px;
-	}
     }
+
+    .carousel{
+	.carousel-inner{height:(450/1.62)+px;}
+	ol{bottom:0px;}
+	li{margin:0px;}
+	}
+}

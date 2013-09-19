@@ -5,19 +5,59 @@
     <table>
       <tr>
 	<td style="padding-left:25px">
-	  <div class='carousel'>
+	  <div class='carousel-wrapper'>
 	    <%=render :partial=>'framed'%>
-	    <%=image_tag('Orange-Hamster.png')%>
+	    <div id="carousel" class='carousel slide'>
+	      <ol class="carousel-indicators">
+		<li data-target="#carousel" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel" data-slide-to="1"></li>
+		<li data-target="#carousel" data-slide-to="2"></li>
+	      </ol>
+
+	      <div class="carousel-inner">
+		<div class="item active">
+		  <%=image_tag 'Orange-Hamster.png', :alt=>'Orange'%>
+		  <div class="carousel-caption">
+		    <h3>Hamster on the loose</h3>
+		  </div>
+		</div>
+
+		<div class="item">
+		  <%=image_tag 'Blue-Hamster.png', :alt=>'Blue'%>
+		  <div class="carousel-caption">
+		    <h3>Hamster on the blues</h3>
+		  </div>
+		</div>
+
+		<div class="item">
+		  <%=image_tag '2-hamsters.png', :alt=>'2'%>
+		  <div class="carousel-caption">
+		    <h3>Hamster twins</h3>
+		  </div>
+		</div>
+
+	      </div>
+	      <a class="left carousel-control" href="#carousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	      </a>
+	      <a class="right carousel-control" href="#carousel" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	      </a>
+
+	      
+
+	    </div>
+	    
 	  </div>
 	</td>
 	<td>
 	  <h3>Stuff</h3>
 	  
-	    <ul>
-	      <li>fdjgldfjgkldfjgldfkj gldfkjgdfklgj ldfjglkdf gjldfjgldk fjgldjfgkld fjgdfgdfkgj dflgjkldfjgld fkjgldfjgkldf jgldfkg</li>
-	      <li>item 2</li>
-	    </ul>
-	 
+	  <ul>
+	    <li>fdjgldfjgkldfjgldfkj gldfkjgdfklgj ldfjglkdf gjldfjgldk fjgldjfgkld fjgdfgdfkgj dflgjkldfjgld fkjgldfjgkldf jgldfkg</li>
+	    <li>item 2</li>
+	  </ul>
+	  
 	</td>
       </tr>
     </table>
