@@ -1,25 +1,33 @@
 @import url(http://fonts.googleapis.com/css?family=Scada:400italic,700italic,400,700&subset=latin,cyrillic);
 
 $font-family-sans-serif: Scada, Georgia, "Times New Roman", Times, serif;
+$global-width:1024px;
+
 
 @import "twitter/bootstrap";
+@import "leads";
 
-$global-width:1000px;
+
 
 .header-container {
     background-image: image_url('Background.png');
     background-color:rgb(46, 52, 61);
     min-width:$global-width;
+    .centered-container{
+	color:#ffffff;
+	>img, >span{
+	    display:inline-block;
+	}
+
+    }
+}
+
+.centered-container{
+    width:$global-width;
+    margin: 0 auto;
+    
     }
 
-.centered-header-container{
-    color:#ffffff;
-    width:$global-width;;
-    margin: 0 auto;
-    >img, >span{
-	display:inline-block;
-	}
-}
 
 .shop-name{
     position:relative;
