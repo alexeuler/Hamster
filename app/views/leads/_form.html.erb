@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone, class:"form-control" %>
+    <%= f.label :phone, "Телефон*" %><br>
+    <%= f.text_field :phone, class:"form-control"%>
   </div>
   <div class="form-group">
-    <%= f.label :address %><br>
+    <%= f.label :address, "Адрес доставки*" %><br>
     <%= f.text_field :address, class:"form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :name %><br>
+    <%= f.label :name, "Имя*" %><br>
     <%= f.text_field :name, class:"form-control" %>
   </div>
   <div class="form-group">
@@ -28,6 +28,6 @@
     <%= f.text_field :email, class:"form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Заказать",class:"btn"%>
   </div>
 <% end %>
