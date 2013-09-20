@@ -1,4 +1,4 @@
-<%= form_for(@lead) do |f| %>
+<%= form_for @lead, html:{role:"form"} do |f| %>
   <% if @lead.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
@@ -11,21 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+    <%= f.text_field :phone, class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class:"form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>

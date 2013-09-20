@@ -4,7 +4,7 @@
     <h2>Самая качественная игрушка от Woody O'Time</h2>
     <table>
       <tr>
-	<td style="padding-left:25px">
+	<td class='first-level-td'>
 	  <div class='carousel-wrapper'>
 	    <%=render :partial=>'framed'%>
 	    <div id="carousel" class='carousel slide' data-ride="carousel">
@@ -59,16 +59,62 @@
 	    
 	  </div>
 	</td>
-	<td>
-	  <h3>Закажите Хомячка у нас <b>прямо сейчас</b> и вы получите: </h3>
-	  
-	  <ul>
-	    <li>Хомячка самого высокого качества всего за 650 рублей! </li>
-	    <li>Бесплатную доставку в пределах Третьего транспортного кольца или за пределами в точках самовывоза в Москве.</li>
-	    <li>Огромнейший заряд позитива для Вас и Ваших друзей!</li>
-	  </ul>
+	<td class='first-level-td'>
+	  <table>
+	    <tr>
+	      <td>
+		<%=render :partial=>'bullet', :locals=>{:img_src=>'Laugh.png', :heading=>'Head', :text=>"Just some very very long text Just some very very long text Just some very very long text Just some very very long text"}%>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<%=render :partial=>'bullet', :locals=>{:img_src=>'Gift.png', :heading=>'Head', :text=>"Just some very very long text Just some very very long text Just some very very long text Just some very very long text"}%>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<%=render :partial=>'bullet', :locals=>{:img_src=>'Baby.png', :heading=>'Head', :text=>"Just some very very long text Just some very very long text Just some very very long text Just some very very long text"}%>
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
+    </table>
+    <button type="button" class="btn">Заказать</button>    
+  </div>
+</div>
 
-	  <button type="button" class="btn">Заказать</button>
+<div class="interest-container">
+  <div class="centered-container">
+    <h2>Video</h2>
+    <table>
+      <tr>
+	<td>
+	  <div id="video1" class="video">
+	    <%=render :partial=>'framed'%>
+	    <iframe width="460" height="284" src="https://www.youtube.com/embed/S5ixgEktt2k" frameborder="0" allowfullscreen></iframe>
+	  </div>
+	</td>
+	<td>
+	  <div id="video2" class="video">
+	    <%=render :partial=>'framed'%>
+	    <iframe width="460" height="284" src="https://www.youtube.com/embed/3chqTeR0dok" frameborder="0" allowfullscreen></iframe>
+	  </div>
+	</td>
+      </tr>
+      
+      <tr>
+	<td>
+	  <div id="video3" class="video">
+	    <%=render :partial=>'framed'%>
+	    <iframe width="460" height="284" src="https://www.youtube.com/embed/gW1cLwCXPQs" frameborder="0" allowfullscreen></iframe>
+	  </div>
+	</td>
+	<td>
+	  <div id="video4" class="video">
+	    <%=render :partial=>'framed'%>
+	    <iframe width="460" height="284" src="https://www.youtube.com/embed/a2bbHSAeV34" frameborder="0" allowfullscreen></iframe>
+	  </div>
 	</td>
       </tr>
     </table>
@@ -76,7 +122,26 @@
 </div>
 
 <div class="decision-container">
+  <div class="centered-container">
+    <table>
+      <tr>
+	<td>
+	  <div class="offer-container">
+	    <%=image_tag 'Orange-Hamster.png'%>
+	    <ul>
+	      <li>Item1</li>
+	      <li>Item1</li>
+	      <li>Item1</li>
+	      <li>Item1</li>
+	      </ul>
+	  </div>
+	</td>
+	<td>
+	  <%= render 'form' %>
+	</td>
+      </tr>
+    </table>
+  </div>
 </div>
-<%= render 'form' %>
 
-<%= link_to 'Back', leads_path %>
+
