@@ -58,7 +58,7 @@
 	    </div>
 	    
 	  </div>
-	  <button type="button" class="btn">Заказать</button>    
+	  <button id="upper_order_btn" type="button" class="btn" href="<%= new_lead_path %>/#decision-container">Заказать</button>    
 	</td>
 	<td class='first-level-td'>
 	  <table>
@@ -121,19 +121,20 @@
   </div>
 </div>
 
-<div class="decision-container">
+<div id="decision_container" class="decision-container">
   <div class="centered-container">
     <table>
       <tr>
 	<td>
 	  <div class="offer-container">
-	    <%=image_tag 'Orange-Hamster.png'%>
+	    <%=image_tag 'Orange-Hamster.png', id:'orange_hamster_image'%>
+	    <%=image_tag 'Blue-Hamster.png', class:'hide', id:'blue_hamster_image'%>
 	    <ul>
 	      <li>Цена 650 рублей</li>
 	      <li>Доставка по Москве 250 руб.</li>
 	      <li>Оригинальный хомячок Woody O'Time</li>
 	      <li>Гарантия 14 дней</li>
-	      </ul>
+	    </ul>
 	  </div>
 	</td>
 	<td>
@@ -144,4 +145,12 @@
   </div>
 </div>
 
-
+<div class="review-container">
+  <div class="centered-container">
+    <h2>Будем Вам благодарны за Ваши отзывы</h2>
+    <div id="vk_comments" style="height: 144px; width: 940px; background-image: none; background-position: initial initial; background-repeat: initial initial;">
+      <iframe name="fXDff448" frameborder="0" src="http://vk.com/widget_comments.php?app=3873249&amp;width=940px&amp;_ver=1&amp;limit=10&amp;height=0&amp;mini=auto&amp;norealtime=0&amp;page=0&amp;status_publish=1&amp;attach=*&amp;url=http%3A%2F%2Fhoma-online.ru%2F&amp;title=%D0%A5%D0%BE%D0%BC%D0%B0%20%D0%9E%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD&amp;description=%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%20%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D1%8F%D1%89%D0%B8%D1%85%20%D1%85%D0%BE%D0%BC%D1%8F%D1%87%D0%BA%D0%BE%D0%B2&amp;image=&amp;14141bbc8e7" width="940" height="133" scrolling="no" id="vkwidget1" style="overflow: hidden; height: 144px;">
+      </iframe>
+    </div>
+  </div>
+</div>

@@ -27,6 +27,14 @@
     <%= f.label :email %><br>
     <%= f.text_field :email, class:"form-control" %>
   </div>
+   <div class="form-group">
+    <%= f.label :color, "Цвет" %><br>
+    <%= f.select :color, options_for_select([['Коричневый','Коричневый' ], ['Серый', 'Серый']]), {}, {:class =>"form-control"} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :comments, "Комментарии" %><br>
+    <%= f.text_area :comments, class:"form-control", rows:"3" %>
+  </div>
   <div class="actions">
     <%= f.submit "Заказать",class:"btn"%>
   </div>

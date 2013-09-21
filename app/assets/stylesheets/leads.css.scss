@@ -215,3 +215,22 @@
 	border-radius:15px;
 	}
 }
+
+.new_lead{
+    input:not(.btn), textarea{
+	font-size:$font-size-base*1.5;
+	padding:0px 10px;
+    }
+    select{
+	font-size:$font-size-base*1.5;
+	padding:0px 5px;
+	}
+}
+
+.review-container{
+    background-image: image_url('Background.png');
+    background-color:#fff;
+    text-align:center;
+    h2{margin:0}
+
+    }

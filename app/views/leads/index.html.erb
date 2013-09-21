@@ -7,6 +7,8 @@
       <th>Address</th>
       <th>Name</th>
       <th>Email</th>
+      <th>Color</th>
+      <th>Comments</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,6 +22,8 @@
         <td><%= lead.address %></td>
         <td><%= lead.name %></td>
         <td><%= lead.email %></td>
+	<td><%= lead.color %></td>
+	<td><%= lead.comments %></td>
         <td><%= link_to 'Show', lead %></td>
         <td><%= link_to 'Edit', edit_lead_path(lead) %></td>
         <td><%= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' } %></td>
