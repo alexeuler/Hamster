@@ -224,6 +224,10 @@
     select{
 	font-size:$font-size-base*1.5;
 	padding:0px 5px;
+    }
+    .error{
+	font-weight:normal;
+	color:#f00;
 	}
 }
 
