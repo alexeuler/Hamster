@@ -1,0 +1,9 @@
+@mixin background-gradient($image, $start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%){
+    background-image: image_url($image);
+    background-color:$start-color;
+    background-image: image_url($image), -webkit-gradient(linear, left $start-percent, left $end-percent, from($start-color), to($end-color)); // Safari 4+, Chrome 2+
+    background-image: image_url($image), -webkit-linear-gradient(top, $start-color, $start-percent, $end-color, $end-percent); // Safari 5.1+, Chrome 10+
+    background-image:  image_url($image), -moz-linear-gradient(top, $start-color $start-percent, $end-color $end-percent); // FF 3.6+
+    background-image: image_url($image), linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
+    }
+

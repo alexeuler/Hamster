@@ -60,9 +60,8 @@
 
 
 .attention-container{
-    .centered-container{position:relative;	} 
-    background-image: image_url('Background.png'),-webkit-gradient(linear,left top, left bottom, color-stop(0,rgb(79, 189, 227)), color-stop(1,rgb(143, 229, 255)));
-    
+    .centered-container{position:relative;	}
+    @include background-gradient('Background.png',rgb(79, 189, 227),rgb(143, 229, 255));
     min-width:$global-width;
     padding:5px 0px;
     color:#ffffff;
@@ -163,8 +162,7 @@
 .interest-container{
     
     padding-top:20px;
-    background-image: image_url('Background.png'),-webkit-gradient(linear,left top, left bottom, color-stop(0,rgb(143, 229, 255)), color-stop(1,rgb(233, 253, 255)));
-
+    @include background-gradient('Background.png',rgb(143, 229, 255),rgb(233, 253, 255));
     min-width:$global-width;
     font-size:$font-size-large;
     color:#fff;
@@ -189,8 +187,7 @@
 }
 
 .decision-container{
-    background-image: image_url('Background.png'),-webkit-gradient(linear,left top, left bottom, color-stop(0,rgb(233, 253, 255)), color-stop(1,rgb(255, 255, 255)));
-    
+    @include background-gradient('Background.png',rgb(233, 253, 255),rgb(255, 255, 255));
     min-width:$global-width;
     padding:5px 0px 50px 0px;
     color:$gray;
