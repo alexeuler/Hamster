@@ -25,18 +25,20 @@ class LeadsController < ApplicationController
   # POST /leads.json
   def create
     @lead = Lead.new(lead_params)
-
-    respond_to do |format|
-      if @lead.save
-        format.html { redirect_to @lead, notice: 'Lead was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @lead }
+    if @lead.save
+      if request.xhr?
+        render text:'success'
       else
-        format.html { render action: 'new' }
-        format.json { render json: @lead.errors, status: :unprocessable_entity }
+        redirect_to @lead, notice: 'Lead was successfully created.'
+      end
+    else
+      if request.xhr?
+        render text:'error'
+      else
+        render action: 'new'
       end
     end
   end
-
   # PATCH/PUT /leads/1
   # PATCH/PUT /leads/1.json
   def update
@@ -62,13 +64,13 @@ class LeadsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_lead
-      @lead = Lead.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_lead
+    @lead = Lead.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def lead_params
-      params.require(:lead).permit(:phone, :address, :name, :email, :color, :comments)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def lead_params
+    params.require(:lead).permit(:phone, :address, :name, :email, :color, :comments)
+  end
 end

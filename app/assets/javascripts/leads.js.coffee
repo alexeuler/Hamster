@@ -10,10 +10,29 @@ $ ->
                 $('#orange_hamster_image').toggleClass('hide')
                 $('#blue_hamster_image').toggleClass('hide')
         $('#new_lead input[type="submit"]').click (e)->
-                unless $('#new_lead').valid()
-                        e.preventDefault
-                        e.stopPropagation
-                        
+                e.preventDefault()
+                e.stopPropagation()
+                if $('#new_lead').valid()
+                        $.ajax
+                                
+                                type:'POST'
+                                contentType: 'application/json; charset=UTF-8'
+                                url:'/leads'
+                                data:
+                                        JSON.stringify lead:
+                                                phone:$("#lead_phone").val()
+                                                address:$("#lead_address").val()
+                                                name:$("#lead_name").val()
+                                                email:$("#lead_email").val()
+                                                color:$("#lead_color").val()
+                                                comments:$("#lead_comments").val()
+                                                
+                                success:(data,status,response)->
+                                        if data is "success"
+                                                $('#success_modal').modal('show')
+                                        else
+                                                $('#error_modal').modal('show')
+                                                
         $('#new_lead').validate
                 rules:
                         'lead[phone]':

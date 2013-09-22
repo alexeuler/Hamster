@@ -34,7 +34,7 @@
 }
 
 
-.btn{
+.attention-container .btn, .decision-container .btn{
 
     border:0px;
     -webkit-animation-duration: 0.5s;
@@ -234,4 +234,11 @@
     text-align:center;
     h2{margin:0}
 
+}
+
+.modal
+{
+    font-size:$font-size-base*1.5;
+    h4{font-size:$font-size-base*1.5*4/3;}
+    .btn{font-size:$font-size-base*1.5;}
     }
