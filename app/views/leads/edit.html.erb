@@ -1,6 +1,59 @@
-<h1>Editing lead</h1>
+<div class="decision-container">
+  <div class="centered-container">
+    <h1>Изменить заказ</h1>
+    <%= form_for @lead, html:{role:"form"} do |f| %>
+    <% if @lead.errors.any? %>
+      <div id="error_explanation">
+	<h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+	<ul>
+	  <% @lead.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+	  <% end %>
+	</ul>
+      </div>
+    <% end %>
 
-<%= render 'form' %>
+    <div class="form-group">
+      <%= f.label :phone, "Телефон*" %><br>
+      <%= f.text_field :phone, class:"form-control"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :address, "Адрес доставки*" %><br>
+      <%= f.text_field :address, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :name, "Имя*" %><br>
+      <%= f.text_field :name, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email %><br>
+      <%= f.text_field :email, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :color, "Цвет" %><br>
+      <%= f.select :color, options_for_select([['Коричневый','Коричневый' ], ['Серый', 'Серый']],@lead.color), {}, {:class =>"form-control"} %>
+    </div>
+    <div class="form-group">
+      <%= f.label :comments, "Комментарии к заказу" %><br>
+      <%= f.text_area :comments, class:"form-control", rows:"3" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :status, "Статус" %><br>
+      <%= f.select :status, options_for_select([['',''],['Звонок покупателю','Звонок покупателю' ], ['Согласовано время доставки', 'Согласовано время доставки'],['Найден курьер','Найден курьер'],['Заказ передан курьеру','Заказ передан курьеру'],['Заказ доставлен','Заказ доставлен'],['Заказ закрыт','Заказ закрыт']],@lead.status),{}, {:class =>"form-control"} %>
+    </div>
+    <div class="form-group">
+      <%= f.label :admin_comments, 'Комментарии к статусу' %><br>
+      <%= f.text_area :admin_comments, class:"form-control", rows:3 %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Изменить",class:"btn btn-primary"%>
+    </div>
+<% end %>
+<br />
 
 <%= link_to 'Show', @lead %> |
 <%= link_to 'Back', leads_path %>
+
+</div>
+</div>

@@ -32,6 +32,8 @@ $ ->
                                                 $('#success_modal').modal('show')
                                         else
                                                 $('#error_modal').modal('show')
+                                error:->
+                                        $('#error_modal').modal('show')
                                                 
         $('#new_lead').validate
                 rules:

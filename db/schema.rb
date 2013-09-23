@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130923143352) do
+ActiveRecord::Schema.define(version: 20130923185728) do
 
   create_table "leads", force: true do |t|
     t.string   "phone"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20130923143352) do
     t.string   "color"
     t.string   "comments"
     t.string   "status"
-    t.string   "changedby"
-    t.string   "admincomments"
+    t.string   "updated_by"
+    t.string   "admin_comments"
   end
 
   create_table "users", force: true do |t|

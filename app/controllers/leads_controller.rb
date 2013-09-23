@@ -43,9 +43,10 @@ class LeadsController < ApplicationController
   # PATCH/PUT /leads/1
   # PATCH/PUT /leads/1.json
   def update
+    @lead.updated_by=current_user.email
     respond_to do |format|
       if @lead.update(lead_params)
-        format.html { redirect_to @lead, notice: 'Lead was successfully updated.' }
+        format.html { redirect_to leads_path, notice: 'Lead was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -72,6 +73,6 @@ class LeadsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def lead_params
-    params.require(:lead).permit(:phone, :address, :name, :email, :color, :comments)
+    params.require(:lead).permit(:phone, :address, :name, :email, :color, :comments, :status, :admin_comments)
   end
 end
