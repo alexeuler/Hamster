@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+  <h1>Заказы</h1>
+
+  <table>
+    <thead>
+      <tr>
+	<th>Телефон</th>
+	<th>Адрес</th>
+	<th>Имя</th>
+	<th>Email</th>
+	<th>Модель</th>
+	<th>Комментарии к заказу</th>
+      </tr>
+    </thead>
+
+    <tbody>
+	<tr>
+          <td><%= @lead.phone %></td>
+          <td><%= @lead.address %></td>
+          <td><%= @lead.name %></td>
+          <td><%= @lead.email %></td>
+	  <td><%= @lead.color %></td>
+	  <td><%= @lead.comments %></td>
+	</tr>
+      
+    </tbody>
+  </table>
+
+    
+  </body>
+</html>

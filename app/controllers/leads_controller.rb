@@ -27,6 +27,7 @@ class LeadsController < ApplicationController
   def create
     @lead = Lead.new(lead_params)
     if @lead.save
+      InfoMailer.new_lead(@lead).deliver
       if request.xhr?
         render text:'success'
       else
