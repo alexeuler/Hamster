@@ -29,6 +29,7 @@ $ ->
                                                 
                                 success:(data,status,response)->
                                         if data is "success"
+                                                yaCounter22285655.reachGoal('ORDER')
                                                 $('#success_modal').modal('show')
                                         else
                                                 $('#error_modal').modal('show')
