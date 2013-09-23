@@ -1,6 +1,6 @@
 <h1>Listing leads</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Phone</th>
@@ -9,7 +9,11 @@
       <th>Email</th>
       <th>Color</th>
       <th>Comments</th>
-      <th></th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>Status</th>
+      <th>Updated By</th>
+      <th>Order Comments</th>
       <th></th>
       <th></th>
     </tr>
@@ -24,7 +28,11 @@
         <td><%= lead.email %></td>
 	<td><%= lead.color %></td>
 	<td><%= lead.comments %></td>
-        <td><%= link_to 'Show', lead %></td>
+	<td><%= lead.created_at.in_time_zone('Moscow').to_formatted_s(:db) %></td>
+	<td><%= lead.updated_at.in_time_zone('Moscow').to_formatted_s(:db) %></td>
+	<td><%= lead.status %></td>
+	<td><%= lead.changedby %></td>
+	<td><%= lead.admincomments %></td>
         <td><%= link_to 'Edit', edit_lead_path(lead) %></td>
         <td><%= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
