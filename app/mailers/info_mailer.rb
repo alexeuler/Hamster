@@ -10,6 +10,6 @@ end
 def thanks(to,name,sex)
   @name=name
   @sex=sex
-  mail(to:'info@homa-online.ru', subject:'Спасибо за заказ!')
+  mail(to:to, subject:'Спасибо за заказ!')
 end
 end
