@@ -2,10 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
+        $('.logo').click ->
+                $('#new_lead #lead_phone').focus()
         $('#upper_order_btn').click (e)->
                 e.preventDefault()
                 e.stopPropagation()
-                $('#lead_phone').focus()
+                $('#new_lead #lead_phone').focus()
         $('#lead_color').change ->
                 $('#orange_hamster_image').toggleClass('hide')
                 $('#blue_hamster_image').toggleClass('hide')
@@ -20,7 +22,7 @@ $ ->
                                 url:'/leads'
                                 data:
                                         JSON.stringify lead:
-                                                phone:$("#lead_phone").val()
+                                                phone:$("#new_lead #lead_phone").val()
                                                 address:$("#lead_address").val()
                                                 name:$("#lead_name").val()
                                                 email:$("#lead_email").val()
@@ -35,7 +37,30 @@ $ ->
                                                 $('#error_modal').modal('show')
                                 error:->
                                         $('#error_modal').modal('show')
+
+
+        $('#callback_modal input[type="submit"]').click (e)->
+                e.preventDefault()
+                e.stopPropagation()
+                $.ajax
+                        type:'POST'
+                        contentType: 'application/json; charset=UTF-8'
+                        url:'/leads'
+                        data:
+                                JSON.stringify lead:
+                                        phone:$("#callback_modal #lead_phone").val()
                                                 
+                        success:(data,status,response)->
+                                $('#callback_modal').modal('hide')
+                                if data is "success"
+                                        yaCounter22285655.reachGoal('ORDER')
+                                        $('#callback_success_modal').modal('show') 
+                                else
+                                        $('#error_modal').modal('show')
+                        error:->
+                                $('#callback_modal').modal('hide')
+                                $('#error_modal').modal('show')
+                                
         $('#new_lead').validate
                 rules:
                         'lead[phone]':

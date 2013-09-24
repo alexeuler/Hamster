@@ -241,4 +241,9 @@
     font-size:$font-size-base*1.5;
     h4{font-size:$font-size-base*1.5*4/3;}
     .btn{font-size:$font-size-base*1.5;}
-    }
+    &#callback_modal{
+	.btn{font-size:$font-size-base;}
+	}
+}
+
+

@@ -38,13 +38,17 @@ $global-width:1024px;
 .contacts{
     $contacts-font-size:24px;
     $logo-size: 113px;
+    
     padding: 0px 15px 0px 0px;
     font-size:$contacts-font-size;
     line-height:$line-height-base * $contacts-font-size;
     float:right;
     text-align:right;
     position:relative;
-    top: $logo-size / 2 - $line-height-base * $contacts-font-size;
+    top: $logo-size / 2 - $line-height-base * $contacts-font-size*1.5;
+    a{
+	color:#99EBFF;
+	}
     p {
 	margin:0;
 	}
