@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Scada:400italic,700italic,400,700&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Bad+Script&subset=cyrillic,latin);
 
 $font-family-sans-serif: Scada, Georgia, "Times New Roman", Times, serif;
 $global-width:1024px;
@@ -33,6 +34,9 @@ $global-width:1024px;
 .shop-name{
     position:relative;
     top: $headings-line-height*$font-size-large/2;
+    h1{
+	font-family: 'Bad Script', cursive;
+	}
     }
 
 .contacts{
