@@ -7,7 +7,7 @@ def new_lead(lead)
   mail(to:'info@homa-online.ru', subject:'Новый заказ')
 end
 
-def thank_you(to,name,sex)
+def thanks(to,name,sex)
   @name=name
   @sex=sex
   mail(to:'info@homa-online.ru', subject:'Спасибо за заказ!')
