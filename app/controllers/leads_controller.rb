@@ -5,7 +5,7 @@ class LeadsController < ApplicationController
   # GET /leads
   # GET /leads.json
   def index
-    @leads = Lead.all
+    @leads = Lead.order("created_at DESC").page(params[:page]).per(20)
   end
 
   # GET /leads/1
