@@ -31,6 +31,7 @@ $ ->
                                                 
                                 success:(data,status,response)->
                                         if data is "success"
+                                                _gaq.push(['_trackEvent', 'Order', 'Buy', ''])
                                                 yaCounter22285655.reachGoal('ORDER')
                                                 $('#success_modal').modal('show')
                                         else
