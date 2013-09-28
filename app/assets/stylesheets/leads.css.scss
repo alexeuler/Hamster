@@ -67,6 +67,21 @@
     color:#ffffff;
     font-size:$font-size-large;
     text-shadow:rgba(0, 0, 0, 0.6) 0px 0px 5px;
+
+    .nav-pills{
+	a, a:hover, a:focus{
+	    border-radius:15px;
+	    color:#fff;
+	}
+	a:hover{
+	    background-color:rgba(245, 152, 51, 0.7);
+	}
+	.active{
+	    a, a:hover, a:focus{
+		@include gradient-vertical(#F59833,darken(#F59833,20%),50%);
+		}
+	    }
+	}
     
     h1,h2{
 	margin:5px 0px;
