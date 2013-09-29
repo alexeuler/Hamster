@@ -1,12 +1,13 @@
 Toys::Application.routes.draw do
   devise_for :users
+  namespace :hamsters do
+    get 'videos' => 'videos#index'
+  end
   resources :hamsters
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
   root 'hamsters#new'
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -50,10 +51,4 @@ Toys::Application.routes.draw do
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
 
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
 end

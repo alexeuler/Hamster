@@ -1,0 +1,2 @@
+module Hamsters::VideosHelper
+end

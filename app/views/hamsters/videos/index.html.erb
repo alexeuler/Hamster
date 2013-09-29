@@ -1,0 +1,16 @@
+<table >
+  <% for i in 0...@videos.count %>
+    <% if i%2==0%>
+      <tr>
+    <% end %>
+      <td>
+	<div id="video<%= i %>" class="video">
+	  <%=render :partial=>'shared/framed'%>
+	  <iframe width="460" height="284" src="https://www.youtube.com/embed/<%= @videos[i].link %>" frameborder="0" allowfullscreen></iframe>
+	</div>
+      </td>
+      <% if i%2==1%>
+	</tr>
+      <% end %>
+    <% end %>
+</table>
