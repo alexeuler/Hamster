@@ -60,8 +60,10 @@
 
 
 .attention-container{
+    .nav-overlay{position:absolute;background-color:rgba(0,0,0,0.5);height:100px;width:100%; top:0px; height:55px;}
     .centered-container{position:relative;	}
     @include background-gradient('Background.png',rgb(79, 189, 227),rgb(143, 229, 255));
+    position:relative;
     min-width:$global-width;
     padding:5px 0px;
     color:#ffffff;
@@ -69,6 +71,7 @@
     text-shadow:rgba(0, 0, 0, 0.6) 0px 0px 5px;
 
     .nav-pills{
+	
 	a, a:hover, a:focus{
 	    border-radius:15px;
 	    color:#fff;
