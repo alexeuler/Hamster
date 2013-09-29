@@ -2,9 +2,9 @@
 class InfoMailer < ActionMailer::Base
   default from: "info@homa-online.ru"
 
-def new_lead(lead)
-  @lead=lead
-  mail(to:'info@homa-online.ru', subject:'Новый заказ')
+def new_hamster(hamster)
+  @hamster=hamster
+  mail(to:'info@homa-online.ru', subject:'Новый заказ на Хомячка')
 end
 
 def thanks(to,name,sex)
