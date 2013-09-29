@@ -1,0 +1,12 @@
+<% content_for :content do %>
+  <div class="hamsters-navbar">
+    <div class="centered-container">
+      <ul class="nav nav-pills">
+	<li class=<%= "active" if @selected_nav==1 %>><a href="/">Хомячок</a></li>
+	<li class=<%= "active" if @selected_nav==2 %>><a href="/hamsters/videos">Видео</a></li>
+      </ul>
+    </div>
+  </div>
+  <%= yield %>
+<% end %>
+<%= render template: "layouts/application" %>

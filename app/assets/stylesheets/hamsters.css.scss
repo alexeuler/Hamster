@@ -58,21 +58,17 @@
     color:#ffffff;
 }
 
-
-.attention-container{
-    .nav-overlay{position:absolute;background-color:rgba(0,0,0,0.5);height:100px;width:100%; top:0px; height:55px;}
-    .centered-container{position:relative;	}
-    @include background-gradient('Background.png',rgb(79, 189, 227),rgb(143, 229, 255));
-    position:relative;
-    min-width:$global-width;
+.hamsters-navbar{
     padding:5px 0px;
-    color:#ffffff;
-    font-size:$font-size-large;
-    text-shadow:rgba(0, 0, 0, 0.6) 0px 0px 5px;
+    background-image:image_url('Background.png');
+    background-color:darken(#4FBDE3,30%);
 
     .nav-pills{
 	
 	a, a:hover, a:focus{
+	    text-shadow:rgba(0, 0, 0, 0.6) 0px 0px 5px;
+	    font-size:$font-size-base*1.25;
+	    padding:5px 15px;
 	    border-radius:15px;
 	    color:#fff;
 	}
@@ -82,9 +78,46 @@
 	.active{
 	    a, a:hover, a:focus{
 		@include gradient-vertical(#F59833,darken(#F59833,20%),50%);
-		}
 	    }
 	}
+    }
+
+}
+
+.hamsters-video-container{
+    .centered-container{position:relative;	}
+    @include background-gradient('Background.png',rgb(79, 189, 227),rgb(143, 229, 255));
+    position:relative;
+    min-width:$global-width;
+    padding:5px 0px;
+    color:#ffffff;
+    font-size:$font-size-large;
+    text-shadow:rgba(0, 0, 0, 0.6) 0px 0px 5px;
+        .video{
+	width:auto;
+	position:relative;
+	iframe {z-index:1;position:relative;}	
+    }
+    table{
+	width:100%;
+    }
+    td{
+	padding:25px;
+	width:50%;
+    }
+
+}
+
+.attention-container{
+    .centered-container{position:relative;	}
+    @include background-gradient('Background.png',rgb(79, 189, 227),rgb(143, 229, 255));
+    position:relative;
+    min-width:$global-width;
+    padding:5px 0px;
+    color:#ffffff;
+    font-size:$font-size-large;
+    text-shadow:rgba(0, 0, 0, 0.6) 0px 0px 5px;
+
     
     h1,h2{
 	margin:5px 0px;
@@ -227,7 +260,7 @@
 	width: 120px;
 	height: 120px;
 	@include gradient-vertical(#EB8016,#CC4504);
-	}
+    }
     
     .offer-container{
 	text-align:center;
@@ -244,7 +277,7 @@
     form .btn{
 	font-size:$font-size-base*1.5;
 	border-radius:15px;
-	}
+    }
 }
 
 .new_hamster{
@@ -259,7 +292,7 @@
     .error{
 	font-weight:normal;
 	color:#f00;
-	}
+    }
 }
 
 .review-container{
@@ -279,7 +312,7 @@
     .btn{font-size:$font-size-base*1.5;}
     &#callback_modal{
 	.btn{font-size:$font-size-base;}
-	}
+    }
 }
 
 

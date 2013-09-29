@@ -16,6 +16,7 @@ class HamstersController < ApplicationController
   # GET /hamsters/new
   def new
     @hamster = Hamster.new
+    @selected_nav=1
   end
 
   # GET /hamsters/1/edit
