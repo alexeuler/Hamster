@@ -47,9 +47,8 @@ end
 gem 'capistrano'
 gem 'rvm-capistrano'
 
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                          :github => 'anjlab/bootstrap-rails',
-                          :branch => '3.0.0'
-			  gem 'devise'
-			  gem 'mysql2'
-			  gem 'kaminari'
+gem 'anjlab-bootstrap-rails', '>= 3.0.0.0', :require => 'bootstrap-rails'
+
+gem 'devise'
+gem 'mysql2'
+gem 'kaminari'
