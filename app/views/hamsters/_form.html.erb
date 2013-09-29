@@ -1,10 +1,10 @@
-<%= form_for @lead, html:{role:"form"} do |f| %>
-  <% if @lead.errors.any? %>
+<%= form_for @hamster, html:{role:"form"} do |f| %>
+  <% if @hamster.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+      <h2><%= pluralize(@hamster.errors.count, "error") %> prohibited this hamster from being saved:</h2>
 
       <ul>
-      <% @lead.errors.full_messages.each do |msg| %>
+      <% @hamster.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

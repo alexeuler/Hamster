@@ -1,12 +1,12 @@
 <div class="decision-container">
   <div class="centered-container">
     <h1>Изменить заказ</h1>
-    <%= form_for @lead, html:{role:"form"} do |f| %>
-    <% if @lead.errors.any? %>
+    <%= form_for @hamster, html:{role:"form"} do |f| %>
+    <% if @hamster.errors.any? %>
       <div id="error_explanation">
-	<h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+	<h2><%= pluralize(@hamster.errors.count, "error") %> prohibited this hamster from being saved:</h2>
 	<ul>
-	  <% @lead.errors.full_messages.each do |msg| %>
+	  <% @hamster.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
 	  <% end %>
 	</ul>
@@ -31,7 +31,7 @@
     </div>
     <div class="form-group">
       <%= f.label :color, "Цвет" %><br>
-      <%= f.select :color, options_for_select([['Коричневый','Коричневый' ], ['Серый', 'Серый']],@lead.color), {}, {:class =>"form-control"} %>
+      <%= f.select :color, options_for_select([['Коричневый','Коричневый' ], ['Серый', 'Серый']],@hamster.color), {}, {:class =>"form-control"} %>
     </div>
     <div class="form-group">
       <%= f.label :comments, "Комментарии к заказу" %><br>
@@ -39,7 +39,7 @@
     </div>
     <div class="form-group">
       <%= f.label :status, "Статус" %><br>
-      <%= f.select :status, options_for_select([['',''],['Звонок покупателю','Звонок покупателю' ], ['Согласовано время доставки', 'Согласовано время доставки'],['Найден курьер','Найден курьер'],['Заказ передан курьеру','Заказ передан курьеру'],['Заказ доставлен','Заказ доставлен'],['Заказ закрыт','Заказ закрыт']],@lead.status),{}, {:class =>"form-control"} %>
+      <%= f.select :status, options_for_select([['',''],['Звонок покупателю','Звонок покупателю' ], ['Согласовано время доставки', 'Согласовано время доставки'],['Найден курьер','Найден курьер'],['Заказ передан курьеру','Заказ передан курьеру'],['Заказ доставлен','Заказ доставлен'],['Заказ закрыт','Заказ закрыт']],@hamster.status),{}, {:class =>"form-control"} %>
     </div>
     <div class="form-group">
       <%= f.label :admin_comments, 'Комментарии к статусу' %><br>
@@ -52,8 +52,8 @@
 <% end %>
 <br />
 
-<%= link_to 'Show', @lead %> |
-<%= link_to 'Back', leads_path %>
+<%= link_to 'Show', @hamster %> |
+<%= link_to 'Back', hamsters_path %>
 
 </div>
 </div>

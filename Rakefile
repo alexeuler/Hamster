@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Hamster::Application.load_tasks
+Toys::Application.load_tasks

@@ -1,0 +1,48 @@
+<div class="decision-container" style="padding-left:20px;padding-right:20px;min-height:1000px">
+  <h1>Заказы</h1>
+  <%= paginate @hamsters %>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+	<th>Телефон</th>
+	<th>Адрес</th>
+	<th>Имя</th>
+	<th>Email</th>
+	<th>Модель</th>
+	<th>Комментарии к заказу</th>
+	<th>Создан</th>
+	<th>Изменен</th>
+	<th>Статус</th>
+	<th>Автор изменения</th>
+	<th>Комментарии по статусу</th>
+	<th></th>
+	<th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @hamsters.each do |hamster| %>
+	<tr>
+          <td><%= hamster.phone %></td>
+          <td><%= hamster.address %></td>
+          <td><%= hamster.name %></td>
+          <td><%= hamster.email %></td>
+	  <td><%= hamster.color %></td>
+	  <td><%= hamster.comments %></td>
+	  <td><%= hamster.created_at.in_time_zone('Moscow').to_formatted_s(:short)%></td>
+	  <td><%= hamster.updated_at.in_time_zone('Moscow').to_formatted_s(:short) %></td>
+	  <td><%= hamster.status %></td>
+	  <td><%= hamster.updated_by %></td>
+	  <td><%= hamster.admin_comments %></td>
+          <td><%= link_to 'Изменить', edit_hamster_path(hamster) %></td>
+          <td><%= link_to 'Удалить', hamster, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+	</tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <%= link_to "Выйти", destroy_user_session_path, :method => :delete %>
+  
+</div>
+

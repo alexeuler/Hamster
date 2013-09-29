@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Hamster::Application.config.secret_key_base = '0bf7afa2a266b30e39fdd04f37078648b3a2f418d378aec1b72ed09838a3c5b41d24de247f843c1fa1eaa1842de1876e891e5002e7cff66f1a870f527cbddf58'
+Toys::Application.config.secret_key_base = '0bf7afa2a266b30e39fdd04f37078648b3a2f418d378aec1b72ed09838a3c5b41d24de247f843c1fa1eaa1842de1876e891e5002e7cff66f1a870f527cbddf58'
