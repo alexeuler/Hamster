@@ -84,6 +84,13 @@
 
 }
 
+.video{
+    width:auto;
+    position:relative;
+    iframe {z-index:1;position:relative;}	
+}
+
+
 .hamsters-video-container{
     .centered-container{position:relative;	}
     @include background-gradient('Background.png',rgb(79, 189, 227),rgb(143, 229, 255));
@@ -93,11 +100,6 @@
     color:#ffffff;
     font-size:$font-size-large;
     text-shadow:rgba(0, 0, 0, 0.6) 0px 0px 5px;
-        .video{
-	width:auto;
-	position:relative;
-	iframe {z-index:1;position:relative;}	
-    }
     table{
 	width:100%;
     }
@@ -110,7 +112,7 @@
 
 .attention-container{
     .centered-container{position:relative;	}
-    @include background-gradient('Background.png',rgb(79, 189, 227),rgb(143, 229, 255));
+    @include background-gradient('Background.png',rgb(79, 189, 227),rgb(233, 253, 255),70%);
     position:relative;
     min-width:$global-width;
     padding:5px 0px;
@@ -118,7 +120,9 @@
     font-size:$font-size-large;
     text-shadow:rgba(0, 0, 0, 0.6) 0px 0px 5px;
 
-    
+    .video{
+	width:450px;
+	}
     h1,h2{
 	margin:5px 0px;
 	text-align:center;
@@ -211,33 +215,6 @@
 
 }
 
-.interest-container{
-    
-    padding-top:20px;
-    @include background-gradient('Background.png',rgb(143, 229, 255),rgb(233, 253, 255));
-    min-width:$global-width;
-    font-size:$font-size-large;
-    color:#fff;
-    text-shadow:rgba(0, 0, 0, 0.6) 0px 0px 5px;
-    
-
-    h2{text-align:center;}
-
-    table{
-	width:100%;
-    }
-    td{
-	padding:25px;
-	width:50%;
-    }
-    
-    .video{
-	width:auto;
-	position:relative;
-	iframe {z-index:1;position:relative;}	
-    }
-}
-
 .decision-container{
     @include background-gradient('Background.png',rgb(233, 253, 255),rgb(255, 255, 255));
     min-width:$global-width;
@@ -298,8 +275,9 @@
 .review-container{
     padding:10px 0px;
     .centered-container{min-width:$global-width;}
-    background-image: image_url('Background.png');
+    background-image:image_url('Background.png');
     background-color:#fff;
+
     text-align:center;
     h2{margin:0}
 
