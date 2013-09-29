@@ -3,31 +3,31 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
         $('.logo').click ->
-                $('#new_lead #lead_phone').focus()
+                $('#new_hamster #hamster_phone').focus()
         $('#upper_order_btn').click (e)->
                 e.preventDefault()
                 e.stopPropagation()
-                $('#new_lead #lead_phone').focus()
-        $('#lead_color').change ->
+                $('#new_hamster #hamster_phone').focus()
+        $('#hamster_color').change ->
                 $('#orange_hamster_image').toggleClass('hide')
                 $('#blue_hamster_image').toggleClass('hide')
-        $('#new_lead input[type="submit"]').click (e)->
+        $('#new_hamster input[type="submit"]').click (e)->
                 e.preventDefault()
                 e.stopPropagation()
-                if $('#new_lead').valid()
+                if $('#new_hamster').valid()
                         $.ajax
                                 
                                 type:'POST'
                                 contentType: 'application/json; charset=UTF-8'
-                                url:'/leads'
+                                url:'/hamsters'
                                 data:
-                                        JSON.stringify lead:
-                                                phone:$("#new_lead #lead_phone").val()
-                                                address:$("#lead_address").val()
-                                                name:$("#lead_name").val()
-                                                email:$("#lead_email").val()
-                                                color:$("#lead_color").val()
-                                                comments:$("#lead_comments").val()
+                                        JSON.stringify hamster:
+                                                phone:$("#new_hamster #hamster_phone").val()
+                                                address:$("#hamster_address").val()
+                                                name:$("#hamster_name").val()
+                                                email:$("#hamster_email").val()
+                                                color:$("#hamster_color").val()
+                                                comments:$("#hamster_comments").val()
                                                 
                                 success:(data,status,response)->
                                         if data is "success"
@@ -46,10 +46,10 @@ $ ->
                 $.ajax
                         type:'POST'
                         contentType: 'application/json; charset=UTF-8'
-                        url:'/leads'
+                        url:'/hamsters'
                         data:
-                                JSON.stringify lead:
-                                        phone:$("#callback_modal #lead_phone").val()
+                                JSON.stringify hamster:
+                                        phone:$("#callback_modal #hamster_phone").val()
                                                 
                         success:(data,status,response)->
                                 $('#callback_modal').modal('hide')
@@ -62,22 +62,22 @@ $ ->
                                 $('#callback_modal').modal('hide')
                                 $('#error_modal').modal('show')
                                 
-        $('#new_lead').validate
+        $('#new_hamster').validate
                 rules:
-                        'lead[phone]':
+                        'hamster[phone]':
                                 required:true
-                        'lead[email]':
+                        'hamster[email]':
                                 email:true
-                        'lead[address]':
+                        'hamster[address]':
                                 required:true
-                        'lead[name]':
+                        'hamster[name]':
                                 required:true
                 messages:
-                        'lead[phone]':
+                        'hamster[phone]':
                                 required:'Укажите, пожалуйста, номер телефона'
-                        'lead[email]':
+                        'hamster[email]':
                                 email:'Неверный формат email'
-                        'lead[name]':
+                        'hamster[name]':
                                 required:'Укажите, пожалуйста, имя'
-                        'lead[address]':
+                        'hamster[address]':
                                 required:'Укажите, пожалуйста, адрес доставки'                                 
