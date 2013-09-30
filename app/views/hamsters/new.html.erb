@@ -92,10 +92,7 @@
     <table>
       <tr>
 	<td>
-	  <div class="price">
-	    <p>650 руб.</p>
-	  </div>
-	  <div class="offer-container">
+	  <div class="terms table-glass">
 	    <%=image_tag 'Orange-Hamster.png', id:'orange_hamster_image'%>
 	    <%=image_tag 'Blue-Hamster.png', class:'hide', id:'blue_hamster_image'%>
 	    <ul>
@@ -105,8 +102,18 @@
 	      <li>Гарантия 14 дней</li>
 	    </ul>
 	  </div>
+	  <br />
+	  <div class="discount table-glass">
+	    <h1>Акция!</h1>
+	    <ol>
+	      <li>Напишите в разделе <a href='#reviews'>отзывы</a>, почему вы решили купить Хомячка или почему выбрали наш магазин</li>
+	      <li>В комментариях к заказу напишите &quot<a href='' onclick="$('#hamster_comments').val('Хомячок за 600 руб.');return false;">Хомячок за <strong>600</strong> руб.</a>&quot</li>
+	      <li>Получите оригинального хомячка всего за <strong>600</strong> руб.!</li>
+	    </ol>
+	  </div>
+
 	</td>
-	<td>
+	<td class="table-glass">
 	  <%= render 'form' %>
 	</td>
       </tr>
@@ -120,7 +127,7 @@
     <div id="vk_comments"></div>
     <script type="text/javascript">
       VK.Widgets.Comments("vk_comments", {limit: 10, width: "940", attach: "*"});
-      </script>
+    </script>
   </div>
 </div>
 
@@ -170,7 +177,7 @@
 	<div class="form-group">
 	  <%= f.text_field :phone, class:"form-control", placeholder:'Phone'%>
 	</div>
-	    <%= f.submit "Ok",class:"btn btn-primary"%>
+	<%= f.submit "Ok",class:"btn btn-primary"%>
 	<%end%>
       </div>
     </div><!-- /.modal-content -->
