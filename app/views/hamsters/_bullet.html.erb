@@ -2,10 +2,10 @@
   <table>
     <tr>
       <td class='table-icon'><div><%=image_tag img_src%></div> </td>
-      <td class='table-heading'><%=heading%></td>
+      <td class='table-heading'><%=heading.html_safe%></td>
     </tr>
   </table>
 </div>
 <div class="lower-bullet-container">
-  <span><%=text%></span>
+  <span><%=text.html_safe%></span>
 </div>
