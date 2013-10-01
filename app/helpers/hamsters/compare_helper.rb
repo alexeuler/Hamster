@@ -1,0 +1,2 @@
+module Hamsters::CompareHelper
+end

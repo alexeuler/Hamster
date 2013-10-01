@@ -1,7 +1,9 @@
 Toys::Application.routes.draw do
+  get "compare/show"
   devise_for :users
   namespace :hamsters do
     get 'videos' => 'videos#index'
+    get 'compare' => 'compare#show'
   end
   resources :hamsters
 

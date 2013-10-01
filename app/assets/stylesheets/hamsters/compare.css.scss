@@ -1,0 +1,16 @@
+// Place all the styles related to the Hamsters::Compare controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.hamsters-compare-container{
+    .centered-container{position:relative;}
+    @include background-gradient('Background.png',rgb(79, 189, 227),rgb(143, 229, 255));
+    position:relative;
+    min-width:$global-width;
+    color:$gray-dark;
+    h1{margin:0px;}
+    .table-container{
+	border-radius:20px;
+	padding:15px 15px;
+	@include gradient-radial(rgba(197, 50, 50, 0),rgba(197, 50, 50, 0.63));
+    }
+}
