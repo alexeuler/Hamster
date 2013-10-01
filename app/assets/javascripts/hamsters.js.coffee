@@ -5,25 +5,7 @@ $ ->
         $('.logo').click ->
                 $('#new_hamster #hamster_phone').focus()
                 
-#        window.setInterval( ->
-#                deadline=$('#time_left').val()*1000
- #               left=deadline-Date.now()
-  #              days=Math.floor(left/1000/60/60/24)
-   #             hours=Math.floor(left/1000/60/60)-days*24
-    #            minutes=Math.floor(left/1000/60)-(days*24+hours)*60
-     #           seconds=Math.floor(left/1000)-((days*24+hours)*60+minutes)*60
-      #          arr=$([days,hours,minutes,seconds]).map (i,e)->
-       #                 if e < 10
-       #                         e="0"+e
-        #                else
-         #                       e
-#                if left<0 then arr=$([days,hours,minutes,seconds]).map -> "00"
- #               $('.days').text arr[0]
-  #              $('.hours').text arr[1]
-   #             $('.minutes').text arr[2]
-    #            $('.seconds').text arr[3]
-     #   ,1000)
-                
+        $('.timer-container').FlipClock $('#time_left').val() - Math.ceil(Date.now()/1000), {clockFace: 'DailyCounter',	countdown: true}
         $('#upper_order_btn').click (e)->
                 e.preventDefault()
                 e.stopPropagation()

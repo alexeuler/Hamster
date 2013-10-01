@@ -113,28 +113,8 @@
 	  </div>
 	  <div class="timer table-glass red">
 	    <%= hidden_field_tag 'time_left', "#{@timer}" %>
-
-	    <table class='timer-container'>
-	      <tr>
-		<td><span>До конца акции:</span></td>	
-		<td>
-		  <table class="timer-display">
-		    <tr>
-		      <td class='days'></td>
-		      <td class='hours'></td>
-		      <td class='minutes'></td>
-		      <td class='seconds'></td>
-		    </tr>
-		    <tr>
-		      <td>Дн.</td>
-		      <td>Час.</td>
-		      <td>Мин.</td>
-		      <td>Сек.</td>
-		    </tr>
-		  </table>
-		</td>
-	      </tr>
-	    </table>
+	    <span>До конца акции</span>
+	    <div class='timer-container'></div>
 	  </div>
 
 	</td>

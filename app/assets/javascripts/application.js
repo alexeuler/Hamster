@@ -14,5 +14,8 @@
 //= require jquery_ujs
 //= require jquery.validate
 //= require twitter/bootstrap
+//= require flipclock/libs/base
+//= require flipclock/libs/prefixfree.min
+//= require flipclock/flipclock.min
 //= require turbolinks
 //= require_tree .
