@@ -7,3 +7,11 @@
     background-image: image_url($image), linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
     }
 
+@mixin blur($blur:2px)
+{
+    -webkit-filter: blur($blur);
+    -moz-filter   : blur($blur);
+    -ms-filter    : blur($blur);
+    -o-filter     : blur($blur);
+    filter        : blur($blur);
+}

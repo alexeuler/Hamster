@@ -1,4 +1,4 @@
-<%= form_for @hamster, html:{role:"form"} do |f| %>
+<%= form_for @hamster, html:{role:"form", class:"form table-glass blue"} do |f| %>
   <% if @hamster.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@hamster.errors.count, "error") %> prohibited this hamster from being saved:</h2>

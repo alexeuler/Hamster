@@ -92,18 +92,18 @@
     <table>
       <tr>
 	<td>
-	  <div class="terms table-glass">
+	  <div class="terms table-glass blue">
 	    <%=image_tag 'Orange-Hamster.png', id:'orange_hamster_image'%>
 	    <%=image_tag 'Blue-Hamster.png', class:'hide', id:'blue_hamster_image'%>
 	    <ul>
-	      <li>Цена 650 рублей</li>
-	      <li>Доставка по Москве 250 руб.</li>
-	      <li>Оригинальный хомячок Woody O'Time</li>
-	      <li>Гарантия 14 дней</li>
+	      <li><span class="glyphicon glyphicon-chevron-right"></span>&nbspЦена 650 руб. (без учета скидок)</li>
+	      <li><span class="glyphicon glyphicon-chevron-right"></span>&nbspДоставка по Москве 250 руб.</li>
+	      <li><span class="glyphicon glyphicon-chevron-right"></span>&nbspОригинальный хомячок Woody O'Time</li>
+	      <li><span class="glyphicon glyphicon-chevron-right"></span>&nbspГарантия 14 дней</li>
 	    </ul>
 	  </div>
 	  <br />
-	  <div class="discount table-glass">
+	  <div class="discount table-glass red">
 	    <h1>Акция!</h1>
 	    <ol>
 	      <li>Напишите в разделе <a href='#reviews'>отзывы</a>, почему вы решили купить Хомячка или почему выбрали наш магазин</li>
@@ -111,9 +111,12 @@
 	      <li>Получите оригинального хомячка всего за <strong>600</strong> руб.!</li>
 	    </ol>
 	  </div>
+	  <div class="timer table-glass red">
+	    123
+	  </div>
 
 	</td>
-	<td class="table-glass">
+	<td>
 	  <%= render 'form' %>
 	</td>
       </tr>

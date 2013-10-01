@@ -223,7 +223,7 @@
     font-size:$font-size-large;
 
     table{width:100%}
-    td{width:50%;padding:25px;}
+    td{width:50%;padding:10px;position:relative;}
     .centered-container{position:relative;}
     .price{
 	text-align:center;
@@ -293,23 +293,57 @@
     }
 }
 
+.form
+{
+    padding:25px;
+    }
+
 .discount{
+    position:absolute;
+    top:300px;
     padding:10px;
+    width:95%;
     h1{text-align:center;}
     li{margin-bottom:5px;}
     }
 
 .terms{
+    position:absolute;
+    top:10px;
+   
     padding:10px;
-    
+    width:95%;
+   
     ul{
+	padding-left:10px;
 	width: 290px;
 	display: inline-block;
 	vertical-align: middle;
+	list-style-type:none;
+	li{
+	    margin-bottom:10px;
+	    }
 	}
+}
+
+.timer{
+        padding:10px;
+	width:95%;
+	position:absolute;
+	bottom:10px;
+	
     }
 .table-glass{
-    background-color: rgba(94, 163, 124, 0.31);
     border-radius:20px;
-    
+    &.red{
+	@include gradient-radial(rgba(197, 50, 50, 0),rgba(197, 50, 50, 0.33));
     }
+    &.blue{
+	@include gradient-radial(rgba(58, 117, 163, 0),rgba(58, 117, 163, 0.33));
+    }
+    &.green{
+	@include gradient-radial(rgba(58, 163, 58, 0),rgba(58, 163, 58, 0.33));
+    }
+    
+    @include gradient-radial(rgba(94, 163, 124, 0.0),rgba(94, 163, 124, 0.1)); 
+}
