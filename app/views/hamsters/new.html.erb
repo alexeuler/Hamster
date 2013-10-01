@@ -103,16 +103,38 @@
 	    </ul>
 	  </div>
 	  <br />
-	  <div class="discount table-glass red">
+	  <div class="discount table-glass green">
 	    <h1>Акция!</h1>
 	    <ol>
 	      <li>Напишите в разделе <a href='#reviews'>отзывы</a>, почему вы решили купить Хомячка или почему выбрали наш магазин</li>
 	      <li>В комментариях к заказу напишите &quot<a href='' onclick="$('#hamster_comments').val('Хомячок за 600 руб.');return false;">Хомячок за <strong>600</strong> руб.</a>&quot</li>
-	      <li>Получите оригинального хомячка всего за <strong>600</strong> руб.!</li>
+	      <li>Получите оригинального хомячка всего за <strong style="font-size:21px">600</strong> руб.!</li>
 	    </ol>
 	  </div>
 	  <div class="timer table-glass red">
-	    123
+	    <%= hidden_field_tag 'time_left', "#{@timer}" %>
+
+	    <table class='timer-container'>
+	      <tr>
+		<td><span>До конца акции:</span></td>	
+		<td>
+		  <table class="timer-display">
+		    <tr>
+		      <td class='days'></td>
+		      <td class='hours'></td>
+		      <td class='minutes'></td>
+		      <td class='seconds'></td>
+		    </tr>
+		    <tr>
+		      <td>Дн.</td>
+		      <td>Час.</td>
+		      <td>Мин.</td>
+		      <td>Сек.</td>
+		    </tr>
+		  </table>
+		</td>
+	      </tr>
+	    </table>
 	  </div>
 
 	</td>
@@ -127,6 +149,7 @@
 <div id='reviews' class="review-container">
   <div class="centered-container">
     <h2>Будем Вам благодарны за Ваши отзывы</h2>
+    <br />
     <div id="vk_comments"></div>
     <script type="text/javascript">
       VK.Widgets.Comments("vk_comments", {limit: 10, width: "940", attach: "*"});

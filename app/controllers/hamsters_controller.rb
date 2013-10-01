@@ -17,6 +17,7 @@ class HamstersController < ApplicationController
   def new
     @hamster = Hamster.new
     @selected_nav=1
+    @timer=Bargain.where(tag:'Hamster').first.deadline.to_i
   end
 
   # GET /hamsters/1/edit
