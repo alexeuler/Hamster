@@ -1,6 +1,6 @@
 class HamstersController < ApplicationController
   before_action :set_hamster, only: [:show, :edit, :update, :destroy]
-  before_filter :require_admin, :except=>[:new, :create]
+  before_action :require_admin, :except=>[:new, :create]
 
   # GET /hamsters
   # GET /hamsters.json
@@ -17,7 +17,7 @@ class HamstersController < ApplicationController
   def new
     @hamster = Hamster.new
     @selected_nav=1
-    @timer=Bargain.where(tag:'Hamster').first.deadline.to_i
+    @timer=Bargain.where(tag:'Hamster').first.deadline.to_i unless Bargain.where(tag:'Hamster').count == 0 
   end
 
   # GET /hamsters/1/edit
