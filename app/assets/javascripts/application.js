@@ -16,6 +16,7 @@
 //= require twitter/bootstrap
 //= require flipclock/libs/base
 //= require flipclock/libs/prefixfree.min
-//= require flipclock/flipclock.min
+//= require flipclock/flipclock
+//= require flipclock/faces/DailyCounter
 //= require turbolinks
 //= require_tree .

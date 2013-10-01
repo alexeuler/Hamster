@@ -5,7 +5,8 @@ $ ->
         $('.logo').click ->
                 $('#new_hamster #hamster_phone').focus()
                 
-        $('.timer-container').FlipClock $('#time_left').val() - Math.ceil(Date.now()/1000), {clockFace: 'DailyCounter',	countdown: true}
+        $('.timer-container').FlipClock $('#time_left').val() - Math.ceil(Date.now()/1000), {clockFace: 'DailyCounter', countdown: true}
+        
         $('#upper_order_btn').click (e)->
                 e.preventDefault()
                 e.stopPropagation()
