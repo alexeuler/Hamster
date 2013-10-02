@@ -161,11 +161,13 @@
 
 .flip-clock-wrapper ul.play li.flip-clock-before {
     z-index: 3;
+    animation: hide .5s .3s linear both;
 }
 
 .flip-clock-wrapper ul.play li.flip-clock-active {
-    animation: asd .5s .5s linear both;
-    z-index: 2;
+    //animation: asd .5s .5s linear both;
+    animation: show .5s .3s linear both;
+    z-index: 4;
 }
 
 .flip-clock-divider {
@@ -223,7 +225,8 @@
 
 .flip-clock-wrapper ul.play li.flip-clock-active .down {
     z-index: 2;
-    animation: turn .5s .5s linear both;
+    //animation: turn .5s .5s linear both;
+    //animation: show .5s .3s linear both;
 }
 
 @keyframes turn {
@@ -237,7 +240,9 @@
 
 .flip-clock-wrapper ul.play li.flip-clock-before .up {
     z-index: 2;
-    animation: turn2 .5s linear both;
+    //animation: turn2 .5s linear both;
+    //transform: rotateX(-90deg);
+    //animation: hide .5s .3s linear both;
 }
 
 @keyframes turn2 {
@@ -260,7 +265,8 @@
     background: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
     background: -ms-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
-    animation: show .5s linear both;
+    //animation: show .5s linear both;
+    visibility:hidden;
 }
 
 .flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
@@ -270,7 +276,8 @@
     background: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
     background: -ms-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
-    animation: hide .5s .3s linear both;
+    //    animation: hide .5s .3s linear both;
+    visibility:hidden;
 }
 
 /*DOWN*/
@@ -282,7 +289,8 @@
     background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
-    animation: show .5s linear both;
+//    animation: show .5s linear both;
+    visibility:hidden;
 }
 
 .flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
@@ -292,7 +300,8 @@
     background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
-    animation: hide .5s .3s linear both;
+//    animation: hide .5s .3s linear both;
+    visibility:hidden;
 }
 
 @keyframes show {
