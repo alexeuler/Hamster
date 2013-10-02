@@ -13,6 +13,6 @@
 	th,td{text-align:center; font-size:$font-size-base*1.5}
 	border-radius:20px;
 	padding:15px 15px;
-	@include gradient-radial(rgba(197, 50, 50, 0),rgba(197, 50, 50, 0.63));
+	@include gradient-horizontal(rgba(168, 197, 50, 0.29),rgba(197, 50, 50, 0.63));
     }
 }
