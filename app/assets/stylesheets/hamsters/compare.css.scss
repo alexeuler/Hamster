@@ -8,8 +8,13 @@
     min-width:$global-width;
     color:$gray-dark;
     
-    h1{margin:0px; color:#fff; text-align:center;}
+    h1{margin:0px; color:#fff; text-align:center; text-shadow:rgba(0, 0, 0, 0.6) 0px 0px 4px}
+    .description{
+	margin:5px 0px 25px 0px;
+	font-size:$font-size-base*1.25;
+	}
     .table-container{
+	table{table-layout:fixed;}
 	th,td{text-align:center; font-size:$font-size-base*1.5; vertical-align:middle}
 	border-radius:20px;
 	padding:15px 15px;
