@@ -10,9 +10,9 @@
     
     h1{margin:0px; color:#fff; text-align:center;}
     .table-container{
-	th,td{text-align:center; font-size:$font-size-base*1.5}
+	th,td{text-align:center; font-size:$font-size-base*1.5; vertical-align:middle}
 	border-radius:20px;
 	padding:15px 15px;
-	@include gradient-horizontal(rgba(168, 197, 50, 0.29),rgba(197, 50, 50, 0.63));
+	@include gradient-horizontal(rgba(168, 197, 50, 0.29),rgba(197, 50, 50, 0.63),40%);
     }
 }
