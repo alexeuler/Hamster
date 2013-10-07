@@ -36,7 +36,7 @@ $ ->
                                         if data is "success"
                                                 $('#success_modal').modal('show')
                                                 yaCounter22285655.reachGoal('ORDER')
-                                                _gaq.push(['_trackEvent', 'Order', 'Buy', ''])
+                                                ga('send', 'event', 'buttons', 'buy', 'order_button');
                                         else
                                                 $('#error_modal').modal('show')
                                 error:->
