@@ -243,6 +243,7 @@
 }
 
 .review-container{
+    min-width:$global-width;
     padding:10px 0px;
     .centered-container{min-width:$global-width;}
     background-image:image_url('Background.png');
